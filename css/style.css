@@ -1,0 +1,317 @@
+/*
+ *
+ * General
+ *
+*/
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+	font-family: "Lora", Monospace;
+	text-align: center;
+	color: #fff;
+	text-shadow: 2px 2px 2px #222;
+}
+
+body {
+	/*Pattern from: http://subtlepatterns.com/green-fibers/*/
+	background: url(../images/green-fibers.png);
+}
+
+.link-text {
+	padding: 10px 0 10px 0;
+}
+
+.flex-row {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+	.whole-container {
+		margin: 0 auto;
+		width: 1200px; /*For huge screens, just keep page in middle*/
+	}
+}
+
+/*
+ *
+ * Navbar
+ *
+*/
+
+.flex-nav {
+	display: -webkit-flex;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #000;
+	z-index: 10;
+	border-bottom: 1px solid #fff;
+}
+
+.nav-div {
+	width: 25%;
+	color: white;
+	transition: background-color 0.2s ease;
+	text-align: center;
+	padding: 10px 0 10px;
+	border-right: 1px solid #444;
+}
+
+.nav-div:last-of-type {
+	border-right: none;
+}
+
+.nav-div:hover {
+	background-color: #444;
+}
+
+.nav-link:link,
+.nav-link:visited,
+.nav-link:hover,
+.nav-link:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+@media screen and (min-width: 1200px) {
+	.flex-nav {
+		width: 1200px;  
+		left: calc(50% - 600px); /*For huge screens, just keep nav bar centered in middle*/
+	}
+}
+
+/*
+ *
+ * Header
+ *
+*/
+
+
+.header {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	border-bottom: 4px ridge #fff;
+	margin: 20px 0 20px;
+	padding: 20px;
+}
+
+.header-text h4 {
+	text-align: center;
+	color: #fff;
+	text-shadow: 2px 2px 2px #222;
+}
+
+.logo {
+	background-color: #3773e3;
+	border-radius: 25%;
+}
+
+.flip {
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+@media screen and (max-width: 450px) {
+	.flip {
+		display: none; /*Too cluttered on small screens for both logos*/
+	}
+	.logo {
+		margin-right: 10px;
+	}
+}
+
+/*
+ *
+ * Home
+ *
+*/
+
+.main-image {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.raster-photo {
+	max-width: 100%;
+	border-radius: 5%;
+}
+
+/*
+ *
+ * Portfolio
+ *
+*/
+
+.subheader {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	width: 100%;
+	border-top: 4px ridge #fff;
+	margin: 20px 0 0 0;
+	padding: 20px;
+}
+
+.portfolio {
+	display: -webkit-flex;
+	display: flex;
+	 -webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.project {
+	text-align: center;
+	width: 25%;
+	border: 2px solid #000;
+	transition: background-color 0.2s ease;
+	background-color: #fff;
+	margin: 0 5px 20px 5px;
+	cursor: pointer;
+	border-radius: 5%;
+}
+
+.project:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.project p {
+	font-style: italic;
+}
+
+.thumbnail {
+	max-width: 100%;
+	border-bottom: 1px solid #000;
+}
+
+/*These queries == keep the projects a nice, bigger size on smaller devices*/
+@media screen and (max-width: 700px) {
+	.project {
+		width: 33.33%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.project {
+		width: 40%;
+	}
+}
+
+/*
+ *
+ * Project Modals
+ *
+*/
+
+article {
+	text-align: justify;
+}
+
+.modal-text {
+	padding: 10px 0 10px 0;
+	border-top: 1px solid #e5e5e5;
+}
+
+.modal-flex-footer {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	width: 100%;
+	padding: 15px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.btn-previous {
+	padding: 10px;
+}
+
+.btn-close {
+	padding: 10px 20px 10px 20px;
+}
+
+.btn-next {
+	padding: 10px 25px 10px 25px;
+}
+
+/*
+ *
+ * Writings
+ *
+*/
+
+.cloud {
+	max-width: 60%;
+	background: #fff;
+	border: 1px solid #000;
+	border-radius: 10%;
+	box-shadow: 2px 4px 4px #000;
+	padding: 10px;
+	text-align: center;
+}
+
+.bold {
+	font-weight: bold;
+	border-bottom: 2px solid #ff8429;
+	padding: 5px 0 10px;
+}
+
+@media screen and (max-width: 550px) {
+	.cloud {
+		max-width: 80%;  /*Give more space for the words*/
+	}
+}
+
+/*
+ *
+ * FAQ
+ *
+*/
+
+.orange-box {
+	background-color: #ff8429;
+	width: 90%;
+	margin: 0 0 10px;
+}
+
+.faq-content {
+	margin: 10px;
+	padding: 10px;
+	color: #000;
+}
+
+.faq-q {
+	font-weight: bold;
+	color: #fff;
+}
+
+.faq-a:before {
+	content: "» ";
+}

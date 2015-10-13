@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Jeff Derrenberger's Portfolio</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora" >
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+	<body>
+		<nav class="flex-nav">
+			<div class="nav-div">
+				<a class="nav-link" href="#home">Home</a>
+			</div>
+			<div class="nav-div">
+				<a class="nav-link" href="#portfolio">Portfolio</a>
+			</div>
+			<div class="nav-div">
+				<a class="nav-link" href="#writings">Writings</a>
+			</div>
+			<div class="nav-div">
+				<a class="nav-link" href="#faq">FAQ</a>
+			</div>
+		</nav>
+
+		<div class="whole-container">
+			<header class="header" id="home">
+				<div class="header-logo">
+					<img class="logo" src="images/ThumbSnail.svg" alt="ThumbSnail Logo">
+				</div>
+				<div class="header-text">
+					<h1>Jeff Derrenberger</h1>
+					<h4>Programmer & Pro Gamer</h4>
+				</div>
+				<div class="header-logo">
+					<img class="logo flip" src="images/ThumbSnail.svg" alt="ThumbSnail Logo">
+				</div>
+			</header>
+
+			<main class="main">
+				<div class="main-image">
+					<img class="raster-photo" src="images/ProgramAndProGame-768.jpg" srcset="images/JeffDuringRace.jpg 450w,  images/ProgramAndProGame-768.jpg 768w" sizes="(min-width: 788px) 768px, calc(100vw - 40px)" alt="Jeff as programmer and pro gamer">
+				</div>
+
+				<section class="featured-work">
+					<div class="subheader" id="portfolio">
+						<h2>Featured Work</h2>
+					</div>
+					<div class="portfolio">
+						<div class="project" data-toggle="modal" data-target="#app0">
+							<img class="thumbnail" src="images/ClimbyCharts1x.png" srcset="images/ClimbyCharts2x.png 2x, images/ClimbyCharts1x.png 1x" alt="Climby Charts icon">
+							<h3>Climby Charts</h3>
+							<p>C#, Unity</p>
+						</div>
+						<div class="project" id="project1" data-toggle="modal" data-target="#app1">
+							<img class="thumbnail" src="images/SuperHearts1x.png" srcset="images/SuperHearts2x.png 2x, images/SuperHearts1x.png 1x" alt="Super Hearts icon">
+							<h3>Super Hearts</h3>
+							<p>C++, Cocos2d-x</p>
+						</div>
+						<div class="project" data-toggle="modal" data-target="#app2">
+							<img class="thumbnail" src="images/SuperSevens1x.png" srcset="images/SuperSevens2x.png 2x, images/SuperSevens1x.png 1x" alt="Super Sevens icon">
+							<h3>Super Sevens</h3>
+							<p>C++, Cocos2d-x</p>
+						</div>
+					</div>
+				</section>
+
+				<!--For future reference: The HTML Validator doesn't like role="dialog" being put on the article tag.  In <section> it's fine, but not <article>-->
+
+				<!--Project Modals-->
+			    <article class="modal" id="app0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel0" aria-hidden="true">
+			      <div class="modal-dialog">
+			        <div class="modal-content">
+			          <div class="modal-header">
+			            <h4 class="modal-title" id="myModalLabel0">Climby Charts: Buried Alive in the App Heap</h4>
+			          </div>
+			          <div class="modal-body">
+			            <img class="img-responsive" src="images/ClimbyCharts-683.png" srcset="images/ClimbyCharts-341.png 341w, images/ClimbyCharts-683.png 683w, images/ClimbyCharts-1024.png 1024w" sizes="(min-width: 683px) 680px, 100vw" alt="Climby Charts Screenshot">
+			            <p class="modal-text">Inspired by my first two experiences with the app store, I created this humorous game about how hard it is for a developer to get noticed at all.  You have to dodge Flappy Bird clones and one-star reviews on your futile quest to collect downloads and climb the charts.</p>
+			            <p>Switching over to Unity for this project meant learning some of the differences between C# and C++.  It also meant discovering ways to deal with the bloated excess that comes with using a 3D engine to develop a 2D game.  ("No, Unity, Climby Charts does NOT need to be 100 MB!")</p>
+			            <p><a class="link-text" href="https://itunes.apple.com/us/app/climby-charts-buried-alive/id990041552?mt=8" target="_blank">Try it out on iOS</a> or on <a class="link-text" href="http://www.amazon.com/gp/product/B00XD6YD2Y/ref=mas_pm_Climby_Charts_Buried_Alive_Heap" target="_blank">Android through Amazon</a>.  Or for more info, <a class="link-text" href="http://thumbsnail.wordpress.com/games/climbycharts" target="_blank">check out my blog</a>.</p>
+			          </div>
+			          <div class="modal-flex-footer">
+			            <button type="button" class="btn-previous">Previous</button>
+			            <button type="button" class="btn-close" data-dismiss="modal">Close</button>
+		    			<button type="button" class="btn-next">Next</button>
+			          </div>
+			        </div>
+			      </div>
+			    </article>
+
+			    <article class="modal" id="app1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+			      <div class="modal-dialog">
+			        <div class="modal-content">
+			          <div class="modal-header">
+			            <h4 class="modal-title" id="myModalLabel1">Super Hearts: Double Deck Cancellation Chaos</h4>
+			          </div>
+			          <div class="modal-body">
+			            <img class="img-responsive" src="images/SuperHearts-683.jpg" srcset="images/SuperHearts-341.jpg 341w, images/SuperHearts-683.jpg 683w, images/SuperHearts-1024.jpg 1024w" sizes="(min-width: 683px) 680px, 100vw" alt="Super Hearts Screenshot">
+			            <p class="modal-text">For my second game, I really wanted to reuse all the art assets I had made and even some of the code.  So this time it was the classic card game "Hearts" but with a double deck and the interesting strategies that arise from being able to cancel a paired card.</p>
+			            <p>The most challenging aspect about designing this game was creating the seven different AI difficulties.  "Hearts" isn't a simple, tidy game like "Sevens" where you know the best solution right from the beginning.  The AIs here aren't as perfect as I'd like, but I think they ended up being worthy opponents.  And most importantly, they're just a lot of fun.</p>
+			            <p>You can try it out for free on <a class="link-text" href="http://www.amazon.com/gp/product/B014I8OCNU" target="_blank">Android through Amazon Underground</a>.  Or for more info, <a class="link-text" href="http://thumbsnail.wordpress.com/games/superhearts" target="_blank">check out my blog</a>.</p>
+			          </div>
+			          <div class="modal-flex-footer">
+			            <button type="button" class="btn-previous">Previous</button>
+			            <button type="button" class="btn-close" data-dismiss="modal">Close</button>
+		    			<button type="button" class="btn-next">Next</button>
+			          </div>
+			        </div>
+			      </div>
+			    </article>
+
+			    <article class="modal" id="app2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+			      <div class="modal-dialog">
+			        <div class="modal-content">
+			          <div class="modal-header">
+			            <h4 class="modal-title" id="myModalLabel2">Super Sevens</h4>
+			          </div>
+			          <div class="modal-body">
+			            <img class="img-responsive" src="images/SuperSevens-683.jpg" srcset="images/SuperSevens-341.jpg 341w, images/SuperSevens-683.jpg 683w, images/SuperSevens-1024.jpg 1024w" sizes="(min-width: 683px) 680px, 100vw" alt="Super Sevens Screenshot">
+			            <p class="modal-text">This is the first game I ever made (if you don't count Visual Basic Pong in high school)!  I took the classic card game "Sevens" and spiced it up by allowing you to play with up to 10 different suits, opponents, and suit lengths, as well as 7 different difficulties.  And a double deck.  And a survivor/hearts-style mode.</p>
+			            <p>I learned a ton through this, and it's impossible to list everything.  I learned C++.  I learned how to use a framework (Cocos2d-x).  I learned how to search the internet for answers to all kinds of programming questions and problems.  I even learned about feature creep, including the wholly unnecessary addition of an SQLite database to track gameplay statistics.</p>
+			            <p>For more information, <a class="link-text" href="http://thumbsnail.wordpress.com/games/supersevens" target="_blank">check out my blog</a>.</p>
+			          </div>
+			          <div class="modal-flex-footer">
+			            <button type="button" class="btn-previous">Previous</button>
+			            <button type="button" class="btn-close" data-dismiss="modal">Close</button>
+		    			<button type="button" class="btn-next">Next</button>
+			          </div>
+			        </div>
+			      </div>
+			    </article>
+			    <!--End Modals-->
+
+			    <section class="writings">
+			    	<div class="subheader" id="writings">
+			    		<h2>Writings</h2>
+			    	</div>
+			    	<div class="flex-row">
+				    	<div class="cloud">
+					    	<p class="bold">In addition to designing games, I also write about them!</p>
+					    	<p>I worked as a reviewer (usually under the name "Jeff") and covered some popular games from recent years at:</p>
+					    	<a class="link-text" href="http://ipadgameszone.com" target="_blank">iPad Games Zone</a>
+					    	<p class="bold">TLDR: Buy Faster Than Light! ($9.99)</p>
+					    	<p>Here's a series of reviews I wrote on underappreciated games lost in the TouchArcade forums:</p>
+					    	<a class="link-text" href="https://thumbsnail.wordpress.com/category/good-games-buried-deep/" target="_blank">"Good Games Buried Deep"</a>
+					    	<p class="bold">TLDR: Test Chamber - Mind-Bending Puzzles is awesome!</p>
+					    	<p>And this is my blog about the trials of being an unknown, solo developer:</p>
+					    	<a class="link-text" href="http://thumbsnail.wordpress.com" target="_blank">ThumbSnail Studios</a>
+					    	<p class="bold">TLDR: Safeway Select Chicken Bacon Alfredo Pizza for life!</p>
+					    </div>
+				    </div>
+			    </section>
+
+			    <section class="faq">
+			    	<div class="subheader" id="faq">
+			    		<h2>FAQ</h2>
+			    	</div>
+			    	<div class="flex-row">
+				    	<div class="orange-box">
+				    		<div class="faq-content">
+						    	<p class="faq-q">Q. Are you really a pro gamer?</p>
+						    	<p class="faq-a">Yes, I get to make that claim thanks to Turbo League Racing, a 2013 mobile racing game promoting the Dreamworks movie Turbo.</p>
+						    	<br>
+						    	<p class="faq-q">Q. Oh, is that why you're obsessed with snails?</p>
+						    	<p class="faq-a">I wouldn't say obsessed.  But, yes, that experience motivated me to make my own games, hence ThumbSnail Studios was born.</p>
+						    	<br>
+						    	<p class="faq-q">Q. Did you attempt to become a pro gamer in StarCraft?</p>
+						    	<p class="faq-a">No, the time I spent teaching English in Korea made it clear that kimchi is the source of their dominating power.  My stomach cannot handle kimchi.</p>
+						    	<br>
+						    	<p class="faq-q">Q. If you like snails so much, why don't you eat them?</p>
+						    	<p class="faq-a">Ew, yuck.  Oh, gross, no.  Just no.</p>
+						    </div>
+						</div>
+			    	</div>
+			    </section>
+			</main>
+		</div><!--End whole-container-->
+
+		<script src="js/jquery-1.11.3.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/navigation.js"></script>
+	</body>
+</html>
