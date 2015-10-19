@@ -211,6 +211,11 @@ body {
 	border-bottom: 1px solid #000;
 }
 
+.unsquare {  /*The websites don't have the transparent borders like the app icons...*/
+	border-top-left-radius: 15%;
+	border-top-right-radius: 15%;
+}
+
 /*These queries == keep the projects a nice, bigger size on smaller devices*/
 @media screen and (max-width: 700px) {
 	.project {
