@@ -17,7 +17,7 @@
    http://stackoverflow.com/questions/19884450/when-is-document-ready-needed-and-when-not-in-jquery
 */
 
-var APPS_MAX = 4;  //number of portfolio projects
+var APPS_MAX = $('.project').length;  //number of portfolio projects
 
 function getModalIdNum(button) {
 	var currentModalId = $(button).closest('article').attr('id');  //grab this modal's id

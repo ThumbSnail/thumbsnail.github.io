@@ -197,6 +197,10 @@ body {
 	border-radius: 5%;
 }
 
+.project:nth-of-type(n+4) {
+	margin: 20px 5px 20px 5px;
+}
+
 .project:hover {
 	background-color: #000;
 	color: #fff;
