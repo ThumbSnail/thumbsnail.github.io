@@ -270,6 +270,10 @@ article {
 	padding: 10px 25px 10px 25px;
 }
 
+.emphasize {
+	font-weight: bold;
+}
+
 /*
  *
  * Writings
